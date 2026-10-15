@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Terraform
+# .terraform/ holds downloaded provider binaries and is large. It is
+# rebuilt by `terraform init`, so it never belongs in the repository.
+.terraform/
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+
+# Terraform state can contain resource identifiers and secrets.
+*.tfstate
+*.tfstate.*
+
+# Variable files may carry account-specific or sensitive values.
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+credentials
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS and Windows
+.DS_Store
+.AppleDouble
+Thumbs.db
+desktop.ini
+
+# Downloaded sample data. Rebuilt by scripts/get-data.py.
+# Remove this line if you would rather commit the dataset.
+data/claims/claims_data.csv
