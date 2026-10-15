@@ -8,8 +8,8 @@ scripts, services, and tests.
 Values can be overridden through environment variables without changing
 application source code:
 
-    AWS_PROFILE       AWS named profile (default: neotrix)
-    AWS_REGION        AWS region (default: us-east-1)
+    AWS_PROFILE       AWS named profile
+    AWS_REGION        AWS region 
     BEDROCK_MODEL_ID  Bedrock model identifier (default: amazon.nova-pro-v1:0)
     CLAIM_BUCKET      S3 bucket name; when unset it is read from Terraform
 """
@@ -83,7 +83,7 @@ class AppConfig:
 config = AppConfig(
     aws_profile=os.getenv(
         "AWS_PROFILE",
-        "neotrix",
+        "default",
     ),
     aws_region=os.getenv(
         "AWS_REGION",
